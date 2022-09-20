@@ -1,5 +1,7 @@
 import streamlit as st
 st.title('My Parents New Healthy Diner')
-st.write('Breakfast Menu')
-st.write('Omega 3 and Blueberry Oatmeal')
+st.header('Breakfast Menu')
+st.text('Omega 3 and Blueberry Oatmeal')
+st.text('Kale, Spinach and Rocket Smoothie')
+st.text('Hard-Boiled, Free-Range Egg')
 
