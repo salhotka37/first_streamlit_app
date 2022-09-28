@@ -40,7 +40,7 @@ st.header("The Fruit Load List contains:")
 
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
-       my_cur.execute("select * from fruit_load_list")
+       my_cur.execute("select distinct * from fruit_load_list")
        return my_cur.fetchall()
 
 if st.button('Get Fruit Load List'):
@@ -48,9 +48,9 @@ if st.button('Get Fruit Load List'):
   ret_fruit_load = get_fruit_load_list()
   st.dataframe(ret_fruit_load)
 
-#fruit_to_add = st.text_input("What Fruit Would You Like to Add?")
-#st.write('Thanks for Adding', fruit_to_add)
+fruit_to_add = st.text_input("What Fruit Would You Like to Add?")
+st.write('Thanks for Adding', fruit_to_add)
 
-#my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+my_cur.execute("insert into fruit_load_list values" (fruit_to_add) )
 
 
