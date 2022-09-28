@@ -51,6 +51,6 @@ if st.button('Get Fruit Load List'):
 fruit_to_add = st.text_input("What Fruit Would You Like to Add?")
 st.write('Thanks for Adding', fruit_to_add)
 
-my_cur.execute("insert into fruit_load_list values" (fruit_to_add) )
+my_cur.execute("insert into fruit_load_list values (" fruit_to_add ")" )
 
 
