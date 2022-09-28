@@ -30,8 +30,10 @@ import snowflake.connector
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * from fruit_load_list")
-my_data_row = my_cur.fetchall(5)
+my_data_row = my_cur.fetchall()
+fruits_to_list = st.multiselect("Show Fruits Info for these:", list(my_data_row.index))
+fruits_info = my_data_row.loc[fruits_to_List]
 st.text("The Fruit Load List contains:")
-st.dataframe(my_data_row)
+st.dataframe(fruits_info)
 
 
