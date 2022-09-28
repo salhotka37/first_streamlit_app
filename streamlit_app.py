@@ -26,6 +26,7 @@ fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 st.header("Fruityvice Fruit Advice!")
 st.dataframe(fruityvice_normalized)
 
+import snowflake.connector
 
 
 
