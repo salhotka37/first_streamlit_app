@@ -35,8 +35,8 @@ st.text("The Fruit Load List contains:")
 st.dataframe(my_data_row)
 
 st.text("What Fruit Would You Like to Add?")
-fruits_to_list = st.text_input('What fruit would you like information about?')
-fruits_to_add = st.multiselect("Pick Some Fruits:", list(my_fruit_list.index))
+fruit_to_add = st.text_input("What Fruit Would You Like to Add?")
+st.write('Thanks for Adding', fruit_to_add)
 
 
 
